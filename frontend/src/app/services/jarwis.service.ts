@@ -7,6 +7,10 @@ export class JarwisService {
 
   constructor(private http: HttpClient) { }
 
+  getUsers() {
+    return this.http.get(`${this.baseUrl}/getUsers`)
+  }
+
   signup(data) {
     return this.http.post(`${this.baseUrl}/signup`, data)
   }
@@ -23,4 +27,9 @@ export class JarwisService {
     return this.http.post(`${this.baseUrl}/resetPassword`, data)
   }
 
+  getcountryList() {
+    return this.http.get(`https://restcountries.eu/rest/v2/all`)
+  }
+
 }
+

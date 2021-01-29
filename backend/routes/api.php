@@ -3,6 +3,7 @@ Route::group([
     'middleware' => 'api',
 ], function () {
 
+    Route::get('getUsers', 'AuthController@getUsers');
     Route::post('login', 'AuthController@login');
     Route::post('signup', 'AuthController@signup');
     Route::post('logout', 'AuthController@logout');

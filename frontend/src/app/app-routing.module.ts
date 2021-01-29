@@ -13,6 +13,10 @@ const appRoutes: Routes = [
     path: 'login',
     component: LoginComponent,
     canActivate: [BeforeLoginService]
+  },{
+    path: '',
+    component: LoginComponent,
+    canActivate: [BeforeLoginService]
   },
   {
     path: 'signup',
@@ -20,19 +24,9 @@ const appRoutes: Routes = [
     canActivate: [BeforeLoginService]
   },
   {
-    path: 'profile',
+    path: 'users',
     component: ProfileComponent,
     canActivate: [AfterLoginService]
-  },
-  {
-    path: 'request-password-reset',
-    component: RequestResetComponent,
-    canActivate: [BeforeLoginService]
-  },
-  {
-    path: 'response-password-reset',
-    component: ResponseResetComponent,
-    canActivate: [BeforeLoginService]
   },
 ];
 
